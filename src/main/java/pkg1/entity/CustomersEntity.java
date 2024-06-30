@@ -1,11 +1,14 @@
 package pkg1.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import pkg1.enums.Gender;
 
@@ -24,6 +27,10 @@ public class CustomersEntity {
 	private String email;
 	private String mobile;
 	private String lang_known;
+	@OneToMany(mappedBy = "customerEntity")
+	private List<AppointmentEntity> appointmentEntity;
+	
+	
 	public long getId() {
 		return id;
 	}

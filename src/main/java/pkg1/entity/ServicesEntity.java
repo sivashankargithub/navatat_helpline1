@@ -24,6 +24,8 @@ public class ServicesEntity {
 	private List<ServiceProviderEntity> spe2;
 	@OneToMany(mappedBy = "service3")
 	private List<ServiceProviderEntity> spe3;
+	@OneToMany(mappedBy = "servicesEntity")
+	private List<AppointmentEntity> appointmentEntity;
 	
 	public long getId() {
 		return id;

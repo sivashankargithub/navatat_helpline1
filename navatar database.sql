@@ -77,6 +77,7 @@ insert into appointment
  (appointment_date_time,service_id,issue, customer_id,
  service_provider_id, how_to_connect)values
  ("2024-07-06 08:30:00", 3, "Python Lamda Operator",1,3,"GMeet");
+ select * from appointment;
  
  drop table ratings;
  create table ratings(id int auto_increment primary key, appointment_id int, 
@@ -85,7 +86,6 @@ insert into appointment
  foreign key(appointment_id)references appointment(id));
  
  insert into ratings(appointment_id)values(1);
- 
  select * from appointment;
  select * from ratings;
  use navatar1;

@@ -51,7 +51,10 @@ public class ServiceProviderEntity {
 	
 	@OneToMany(mappedBy = "serviceProvider")
 	private List<ServiceTimingEntity> serviceTimingEntity;
-
+	
+	@OneToMany(mappedBy = "serviceProviderEntity")
+	private List<AppointmentEntity> appointmentEntity;
+	
 	public ServiceProviderEntity() {
 		super();
 	}

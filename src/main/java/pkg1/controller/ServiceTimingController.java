@@ -1,7 +1,6 @@
 package pkg1.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
